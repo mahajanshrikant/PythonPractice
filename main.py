@@ -177,22 +177,69 @@ user_dictionary2.pop("username")
 print(user_dictionary)
 
 ###########################################################################################
+#function in python
 
 
 
+def my_function():
+    print("Hello welcome  to function!")
+my_function()
 
 
+def print_my_name(FirstName,lastName):
+    print(f"Hello {FirstName} {lastName}!")
+
+print_my_name("shrikant","Mahajan")
 
 
+def print_numbers(highest_number,lowest_Number):
+    print(highest_number)
+    print(lowest_Number)
+
+print_numbers(23,67)
+
+def multiply_numbers(a,b):
+    return a*b
+
+print(multiply_numbers(2,6))
+
+#########################################Calling function inside  function ##############
+def buy_item(cost_of_item):
+    return  cost_of_item+add_tax_to_item(cost_of_item)
 
 
+def add_tax_to_item(cost_of_item):
+    current_tax_rate=.03
+    return cost_of_item *current_tax_rate
 
+final_cost=buy_item(50)
+print(final_cost)
 
+def user_dictionary(firstname, lastName,age):
+    created_user_dictionary={
+        'firstName':firstname,
+        'lastName':lastName,
+        'ahe':age
+    }
+    return created_user_dictionary
 
+solution_dictionary=user_dictionary(firstname="Shrikant",lastName="Mahajan",age="20")
+print(solution_dictionary)
 
+#######################################Imports in python #######################################################
 
+homework_assignement_grades={
+    'homework_1':85,
+    'homework_2':90,
+    'homework_3':90,
+}
 
-
+def calculate_homework_grade(homework_assigemnent_argument):
+    sum_of_grades=0
+    for  h in homework_assigemnent_argument.values():
+        sum_of_grades+=h
+        final_grade=sum_of_grades/len(homework_assigemnent_argument)
+        print(final_grade)
 
 
 

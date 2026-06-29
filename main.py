@@ -1,3 +1,6 @@
+import Imports.gradeService
+
+
 # print("Lecture One");
 cost=10;
 tax_percent=0.25;
@@ -234,13 +237,22 @@ homework_assignement_grades={
     'homework_3':90,
 }
 
-def calculate_homework_grade(homework_assigemnent_argument):
-    sum_of_grades=0
-    for  h in homework_assigemnent_argument.values():
-        sum_of_grades+=h
-        final_grade=sum_of_grades/len(homework_assigemnent_argument)
-        print(final_grade)
+Imports.gradeService.calculate_homework_grade(homework_assignement_grades)
 
+
+###Standard Library Comes with Python Useful methods ########################
+
+#Random
+import random
+import  math
+
+square_root=math.sqrt(64)
+print(square_root)
+
+types_of_drinks=['soda','coffee','Water','Tea']
+print(random.choice(types_of_drinks))
+
+print(random.randint(1,10))
 
 
 

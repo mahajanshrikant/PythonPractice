@@ -254,6 +254,23 @@ print(random.choice(types_of_drinks))
 
 print(random.randint(1,10))
 
+############################################################################
 
+from Dog import *
 
+dog=Dog()
+
+var = dog.legs
+var = dog.ears
+var = dog.type
+var = dog.age
+var = dog.color
+
+##############Encapsulation Abstraction Inheritance Ploymorphism #############
+
+from Enemy import *
+
+enemy=Enemy()
+enemy.type_of_enemy="Zombie"
+print(f'{enemy.type_of_enemy} has {enemy.health_points} health points And can do attack of {enemy.attack_damage}  ')
 

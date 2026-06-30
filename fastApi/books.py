@@ -52,3 +52,20 @@ async def create_book(new_book=Body()):
     Books.append(new_book)
 
 
+#put request
+@app.put("/book/{update_book}")
+async def update_book(updated_book=Body()):
+ for  i in range(len(Books)):
+     if Books[i].get('title').casefold()==updated_book.get('title').casefold():
+         Books[i]=updated_book
+
+## Delete  Request Method
+@app.delete("/books/delete_book/{book_title}")
+async def delete_book(book_title:str):
+ for i in range(len(Books)):
+     if Books[i].get('title').casefold()==book_title.casefold():
+         Books.pop(i)
+         break
+
+
+
